@@ -39,7 +39,6 @@ full_address_list$postcode <- ""
 for(i in 1:nrow(full_address_list)) {
  #create the query URL
  qsr_place <- full_address_list$place[i]
- print(qsr_place)
  query_url <-paste("https://quakestudies.canterbury.ac.nz/fedora/objects",qsr_place,"datastreams/RDF/content?format=xml", sep="/")
  #call the API
  res <- VERB("GET", url = query_url, add_headers(headers))
@@ -67,3 +66,4 @@ for(i in 1:nrow(full_address_list)) {
 
 #Export the list to a csv
 write.csv(full_address_list, "~/R/projects/QS API locations list/data/full_address_list.csv")
+

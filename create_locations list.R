@@ -65,5 +65,6 @@ for(i in 1:nrow(full_address_list)) {
 }
 
 #Export the list to a csv
-write.csv(full_address_list, "~/R/projects/QS API locations list/data/full_address_list.csv")
+write.csv(full_address_list, "~/R/projects/QS API locations list/data/full_address_list.csv", row.names = FALSE)
+
 
